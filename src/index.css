@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+:root {
+  --primary: #ff6b6b; /* Red color for manga theme */
+  --secondary: #ffd166; /* Yellow color for manga theme */
+}
+
+h1,h2,h3 {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  color: #333;
+  font-family: 'Poppins';
+  background: #f2f2f2;
+}
+nav {
+  background: var(--primary);
+  padding: 10px 0px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background on hover */
+}
+
+.page {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.discussion-grid{
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.discussion-card {
+  width: 100%;
+  background: #fff; 
+  padding: 20px; 
+  box-sizing: border-box;
+  border-radius: 10px; 
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} 
+
+.discussion-card .upvote{
+  position:absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--secondary);
+  color: #fff;
+  border-radius: 6px;
+  width: 40px;
+  height: 0;
+  padding: 20px 0;
+  line-height: 0px;
+  text-align: center;
+}
+
+.discussion-card i {
+  color: var(--primary); /* Red color for icons */
+  margin-left: 10px;
+  font-size: 1.5em; /* Increased icon size */
+  cursor: pointer;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+form input, form textarea {
+  display: block;
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin: 10px 0 20px 0;
+}
+form button {
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-family: "Poppins";
+  cursor: pointer;
+}
+
+.discussion-card .buttons {
+  text-align: right;
+}
+.discussion-card i {
+  color: #bbb;
+  margin-left: 10px;
+  font-size: 1.2em;
+  padding: 6px;
+  background: #eee;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+
+.order-by button {
+  margin-right: 10px;
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-family: "Poppins";
+  cursor: pointer;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-input {
+  padding: 12px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 18px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: var(--primary); 
+}
+
+.search-button {
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #ff5252; 
+}
+
+.discussion-card-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Use default text color */
+}
+
+.edit-link {
+  text-decoration: none;
+  color: var(--secondary); 
+}
+
+.edit-button,
+.delete-button {
+  background: var(--secondary); 
+  color: #fff;
+  border: 0;
+  padding: 6px 12px;
+  border-radius: 20px; 
+  font-family: 'Poppins';
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  background-color: #ffd43b;
+}
+
+.edit-button {
+  margin-right: 10px;
+}
+
+.delete-button {
+  margin-left: 10px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px; /* Add margin-top for spacing */
+}
+
+.rating {
+  font-size: 18px;
+  color: #333;
+  flex-grow: 1; /* Allow the rating to take up remaining space */
+  text-align: center; /* Center the text horizontally */
+}
+
+.rating-label {
+  color: #777;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.rating-value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px; /* Add spacing between label and value */
+}
+
+.betButton {
+  background-color: #12bca2; /* Primary color for the upvote button */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  margin-top: 10px; /* Add spacing between Rating and Upvote button */
+}
+
+.betButton:hover {
+  background-color: #0d8f7e; /* Darker shade on hover */
+}
+
+
+/* App.css */
+
+.single-post {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.single-post h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.single-post p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.upvote {
+  background-color: #12bca2;
+  color: #fff;
+  padding: 2px 16px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.comment-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment-list li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.comment-list li:last-child {
+  border-bottom: none;
+}
+
+.comment-list li p {
+  color: #444;
+}
+
+.comment-form {
+  margin-top: 20px;
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.comment-form button {
+  background-color: #12bca2;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+  background-color: #0d8f7e;
+}
+
+.logo-link {
+  display: inline-block; 
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #fff;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
